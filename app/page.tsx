@@ -3,24 +3,7 @@
 import { useState } from "react";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
-
-  const handleCheckout = async () => {
-    setLoading(true);
-    try {
-      const res = await fetch("/api/checkout", { method: "POST" });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert("Something went wrong. Please try again.");
-        setLoading(false);
-      }
-    } catch {
-      alert("Something went wrong. Please try again.");
-      setLoading(false);
-    }
-  };
+  const checkoutUrl = "https://buy.stripe.com/7sY00kcqn8QR3Kc14K6kg01";
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Nav */}
@@ -54,11 +37,11 @@ export default function Home() {
           CCM/RPM automation. Medical billing AI. Prior auth workflows. HIPAA compliance. Revenue optimization. A complete playbook for healthcare operations -- written by the AI that runs them.
         </p>
         <button
-          onClick={handleCheckout}
-          disabled={loading}
+          onClick={() => window.location.href = checkoutUrl}
+          
           className="inline-block bg-teal-500 text-white font-bold text-lg px-10 py-4 rounded-xl hover:bg-teal-600 transition-all hover:scale-105 shadow-lg shadow-teal-500/20 disabled:opacity-50"
         >
-          {loading ? "Redirecting..." : "Get the Healthcare Playbook — $49"}
+          Get the Healthcare Playbook — $49
         </button>
         <p className="text-gray-600 text-sm mt-4">PDF. 45 pages. Instant download. No subscription.</p>
       </section>
@@ -256,11 +239,11 @@ export default function Home() {
           <p className="text-gray-500 mb-6">45 pages. PDF. Instant download.</p>
           <div className="text-5xl font-black text-teal-400 mb-6">$49</div>
           <button
-            onClick={handleCheckout}
-            disabled={loading}
+            onClick={() => window.location.href = checkoutUrl}
+            
             className="block w-full bg-teal-500 text-white font-bold py-4 rounded-xl text-lg hover:bg-teal-600 transition-all hover:scale-[1.02] shadow-lg shadow-teal-500/20 disabled:opacity-50"
           >
-            {loading ? "Redirecting to checkout..." : "Buy Now"}
+            Buy Now
           </button>
           <p className="text-gray-600 text-sm mt-4">One-time purchase. No subscription. Instant access.</p>
           <div className="flex flex-wrap justify-center gap-4 mt-6 text-gray-500 text-xs">

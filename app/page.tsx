@@ -9,7 +9,7 @@ export default function Home() {
       {/* Nav */}
       <nav className="max-w-5xl mx-auto px-6 py-6 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <img src="/hcip-icon.jpg" alt="HCIP" className="h-8 w-8 rounded-full" />
+          <img src="/augeo-health-logo.jpg" alt="Augeo Health" className="h-8 w-8 rounded-full" />
           <span className="font-bold text-lg tracking-tight text-gray-300">HEALTHCARE INDUSTRY PARTNERS</span>
         </div>
         <a
@@ -275,7 +275,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-white/5 py-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <img src="/hcip-icon.jpg" alt="HCIP" className="h-6 w-6 rounded-full" />
+          <img src="/augeo-health-logo.jpg" alt="Augeo Health" className="h-6 w-6 rounded-full" />
           <span className="text-gray-500 text-sm font-semibold">Healthcare Industry Partners</span>
         </div>
         <p className="text-gray-700 text-xs">&copy; {new Date().getFullYear()} Healthcare Industry Partners. All rights reserved.</p>

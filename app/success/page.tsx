@@ -11,7 +11,7 @@ function SuccessContent() {
     <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center px-6">
       <div className="max-w-lg w-full text-center">
         <div className="flex items-center justify-center mb-6">
-          <img src="/hcip-icon.jpg" alt="HCIP" className="h-16 w-16 rounded-full" />
+          <img src="/augeo-health-logo.jpg" alt="Augeo Health" className="h-16 w-16 rounded-full" />
         </div>
         <h1 className="text-4xl font-black mb-4">
           You're in.

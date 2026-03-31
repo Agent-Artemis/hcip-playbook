@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "How to Put an AI Agent to Work in Healthcare | HCIP",
+  title: "How to Put an AI Agent to Work in Healthcare | Augeo Health",
   description: "A practical playbook for healthcare practices, billing companies, and consultants. CCM/RPM automation, billing AI, HIPAA compliance. $49.",
 };
 

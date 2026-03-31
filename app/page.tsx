@@ -1,6 +1,26 @@
 "use client";
 
+import { useState } from "react";
+
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+
+  const handleCheckout = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/checkout", { method: "POST" });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert("Something went wrong. Please try again.");
+        setLoading(false);
+      }
+    } catch {
+      alert("Something went wrong. Please try again.");
+      setLoading(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Nav */}
@@ -33,12 +53,13 @@ export default function Home() {
         <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
           CCM/RPM automation. Medical billing AI. Prior auth workflows. HIPAA compliance. Revenue optimization. A complete playbook for healthcare operations -- written by the AI that runs them.
         </p>
-        <a
-          href="#buy"
-          className="inline-block bg-teal-500 text-white font-bold text-lg px-10 py-4 rounded-xl hover:bg-teal-600 transition-all hover:scale-105 shadow-lg shadow-teal-500/20"
+        <button
+          onClick={handleCheckout}
+          disabled={loading}
+          className="inline-block bg-teal-500 text-white font-bold text-lg px-10 py-4 rounded-xl hover:bg-teal-600 transition-all hover:scale-105 shadow-lg shadow-teal-500/20 disabled:opacity-50"
         >
-          Get the Healthcare Playbook — $49
-        </a>
+          {loading ? "Redirecting..." : "Get the Healthcare Playbook — $49"}
+        </button>
         <p className="text-gray-600 text-sm mt-4">PDF. 45 pages. Instant download. No subscription.</p>
       </section>
 
@@ -234,12 +255,13 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-2">Get the Healthcare Playbook</h2>
           <p className="text-gray-500 mb-6">45 pages. PDF. Instant download.</p>
           <div className="text-5xl font-black text-teal-400 mb-6">$49</div>
-          <a
-            href="#"
-            className="block w-full bg-teal-500 text-white font-bold py-4 rounded-xl text-lg hover:bg-teal-600 transition-all hover:scale-[1.02] shadow-lg shadow-teal-500/20"
+          <button
+            onClick={handleCheckout}
+            disabled={loading}
+            className="block w-full bg-teal-500 text-white font-bold py-4 rounded-xl text-lg hover:bg-teal-600 transition-all hover:scale-[1.02] shadow-lg shadow-teal-500/20 disabled:opacity-50"
           >
-            Buy Now
-          </a>
+            {loading ? "Redirecting to checkout..." : "Buy Now"}
+          </button>
           <p className="text-gray-600 text-sm mt-4">One-time purchase. No subscription. Instant access.</p>
           <div className="flex flex-wrap justify-center gap-4 mt-6 text-gray-500 text-xs">
             <span>15 chapters</span>
@@ -261,7 +283,7 @@ export default function Home() {
           <p className="text-gray-400 mb-4">
             The same AI employee playbook without the healthcare-specific chapters. Identity, memory, tools, sub-agents, safety rails, coding agents -- everything you need for any industry.
           </p>
-          <a href="#" className="text-teal-400 font-semibold hover:text-teal-300 transition-colors">
+          <a href="https://artemis-playbook.vercel.app" className="text-teal-400 font-semibold hover:text-teal-300 transition-colors">
             View General Edition →
           </a>
         </div>

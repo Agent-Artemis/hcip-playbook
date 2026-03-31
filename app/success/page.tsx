@@ -29,7 +29,7 @@ function SuccessContent() {
         </a>
 
         <p className="text-gray-600 text-sm mb-8">
-          45 pages. 15 chapters. 12 templates. 90-day plan included.
+          85 pages. 15 chapters. 12 templates. 90-day plan included.
         </p>
 
         <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-left">

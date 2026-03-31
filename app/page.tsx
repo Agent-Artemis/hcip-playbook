@@ -43,7 +43,7 @@ export default function Home() {
         >
           Get the Healthcare Playbook — $49
         </button>
-        <p className="text-gray-600 text-sm mt-4">PDF. 45 pages. Instant download. No subscription.</p>
+        <p className="text-gray-600 text-sm mt-4">PDF. 85 pages. Instant download. No subscription.</p>
       </section>
 
       {/* Revenue hook */}
@@ -80,7 +80,7 @@ export default function Home() {
       {/* What's Inside */}
       <section className="max-w-4xl mx-auto px-6 pb-20">
         <h2 className="text-3xl font-bold text-center mb-4">What's Inside</h2>
-        <p className="text-gray-500 text-center mb-12">15 chapters across 4 parts. 45 pages of actionable systems.</p>
+        <p className="text-gray-500 text-center mb-12">15 chapters across 4 parts. 85 pages of actionable systems.</p>
 
         <div className="space-y-8">
           <div>
@@ -236,7 +236,7 @@ export default function Home() {
       <section id="buy" className="max-w-lg mx-auto px-6 pb-24">
         <div className="bg-white/5 border border-teal-500/20 rounded-2xl p-10 text-center">
           <h2 className="text-3xl font-bold mb-2">Get the Healthcare Playbook</h2>
-          <p className="text-gray-500 mb-6">45 pages. PDF. Instant download.</p>
+          <p className="text-gray-500 mb-6">85 pages. PDF. Instant download.</p>
           <div className="text-5xl font-black text-teal-400 mb-6">$49</div>
           <button
             onClick={() => window.location.href = checkoutUrl}

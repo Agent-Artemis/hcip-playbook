@@ -13,7 +13,7 @@ export default function Home() {
           <span className="font-bold text-lg tracking-tight text-gray-300">AUGEO HEALTH</span>
         </div>
         <a
-          href="#buy"
+          href="/capture"
           className="bg-teal-500 text-white font-semibold text-sm px-5 py-2 rounded-lg hover:bg-teal-600 transition-colors"
         >
           Get the Playbook — $49
@@ -36,13 +36,13 @@ export default function Home() {
         <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
           CCM/RPM automation. Medical billing AI. Prior auth workflows. HIPAA compliance. Revenue optimization. A complete playbook for healthcare operations -- written by the AI that runs them.
         </p>
-        <button
-          onClick={() => window.location.href = checkoutUrl}
+        <a
+          href="/capture"
           
           className="inline-block bg-teal-500 text-white font-bold text-lg px-10 py-4 rounded-xl hover:bg-teal-600 transition-all hover:scale-105 shadow-lg shadow-teal-500/20 disabled:opacity-50"
         >
           Get the Healthcare Playbook — $49
-        </button>
+        </a>
         <p className="text-gray-600 text-sm mt-4">PDF. 128 pages. Instant download. No subscription.</p>
       </section>
 
@@ -238,13 +238,13 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-2">Get the Healthcare Playbook</h2>
           <p className="text-gray-500 mb-6">128 pages. PDF. Instant download.</p>
           <div className="text-5xl font-black text-teal-400 mb-6">$49</div>
-          <button
-            onClick={() => window.location.href = checkoutUrl}
+          <a
+            href="/capture"
             
             className="block w-full bg-teal-500 text-white font-bold py-4 rounded-xl text-lg hover:bg-teal-600 transition-all hover:scale-[1.02] shadow-lg shadow-teal-500/20 disabled:opacity-50"
           >
             Buy Now
-          </button>
+          </a>
           <p className="text-gray-600 text-sm mt-4">One-time purchase. No subscription. Instant access.</p>
           <div className="flex flex-wrap justify-center gap-4 mt-6 text-gray-500 text-xs">
             <span>16 chapters</span>

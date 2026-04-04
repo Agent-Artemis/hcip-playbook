@@ -272,6 +272,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Newsletter Signup */}
+      <section className="max-w-lg mx-auto px-6 pb-20">
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
+          <p className="text-sm text-teal-400 uppercase tracking-wider mb-2 font-semibold">Free Updates</p>
+          <h3 className="text-xl font-bold mb-2">Stay ahead in healthcare AI</h3>
+          <p className="text-gray-400 text-sm mb-6">Weekly insights on CCM/RPM automation, billing AI, and healthcare operations. No spam. Unsubscribe anytime.</p>
+          <form
+            action="https://app.beehiiv.com/forms/subscribe"
+            method="POST"
+            className="flex flex-col sm:flex-row gap-3"
+          >
+            <input type="hidden" name="publication_id" value="pub_976d2854-7a80-4f0a-b978-d2d6ee6b0910" />
+            <input type="hidden" name="utm_source" value="playbook-healthcare" />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:border-teal-400 transition-colors"
+            />
+            <button
+              type="submit"
+              className="px-6 py-3 bg-teal-500 text-white font-bold rounded-xl hover:bg-teal-600 transition-colors whitespace-nowrap"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-white/5 py-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-2">
